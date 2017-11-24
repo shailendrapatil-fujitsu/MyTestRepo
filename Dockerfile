@@ -13,5 +13,6 @@ RUN dotnet publish -c Release -r linux-x64 -o out
 # build runtime image
 FROM microsoft/dotnet:2.0-runtime-deps
 WORKDIR /app
+EXPOSE 80
 COPY --from=build-env /app/out ./
 ENTRYPOINT ["./Fujitsu.IoTDH.RESTService"]
