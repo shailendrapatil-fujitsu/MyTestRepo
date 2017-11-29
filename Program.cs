@@ -15,6 +15,7 @@ namespace Fujitsu.IoTDH.RESTService
         public static void Main(string[] args)
         {
             //BuildWebHost(args).Run();
+            
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
